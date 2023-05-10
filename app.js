@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const Tasksrouter = require('./routes/tasks');
 const {  connectDb } = require('./db/mongoDb');
 const notFound = require('./middlewares/not_found');
 
