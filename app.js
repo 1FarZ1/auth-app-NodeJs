@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 
-// app.use("/api/v1/tasks",Tasksrouter);
+app.use("/api/v1/dashboard",Tasksrouter);
 
 app.use(notFound);  
 
