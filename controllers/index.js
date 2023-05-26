@@ -5,11 +5,11 @@ let login = ()=>{
     if(!username || !password){
         return res.status(400).send('Username or password incorrect');
     }
-
-    const user = { username, password };
-
     
+    const user = { username, password };
     const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+
+    return res.json({ accessToken: accessToken });
 
     
 }
