@@ -1,12 +1,8 @@
 
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+
 let authMiddleware = async (req, res, next)=>{
     const authHeader = req.headers.authorization
-
-//   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-//     throw new UnauthenticatedError('No token provided')
-//   }
-console.log("1");
   const token = authHeader.split(' ')[1]
 
   try {
