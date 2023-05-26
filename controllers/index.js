@@ -1,24 +1,25 @@
 const jwt = require('jsonwebtoken');
 let login = (req,res)=>{
-    // login the user using the jwt ?
-    const { username, password } = req.body;
-    if(!username || !password){
-        return res.status(400).send('Username or password incorrect');
-    }
+    const { username, password } = req.body
 
-    const user = { username, password };
-    const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
-    console.log("user logged in");
+  if (!username || !password) {
+    return res.status(400).json({ msg: 'need username and password' })
+  }
 
+  const id = new Date().getDate()
 
-    return res.json({ accessToken: accessToken });
+  const token = jwt.sign({ id, username }, process.env.ACCESS_TOKEN_SECRET, {
+    expiresIn: '30d',
+  })
 
+  res.status(200).json({ msg: 'user created', token })
     
 }
 
 let dashboard = (req,res)=>{
     const user  =  req.user;
-    console.log(user);
+    let tempNumber = user.id + 5/2 -  100 
+    return  res.status(200).json({msg: "Welcome " + user.username, secret:tempNumber})
     }
 
 

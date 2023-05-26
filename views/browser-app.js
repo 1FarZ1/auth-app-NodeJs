@@ -49,12 +49,16 @@ btnDOM.addEventListener('click', async () => {
         Authorization: `Bearer ${token}`,
       },
     })
-    resultDOM.innerHTML = `<h5>${data.msg}</h5><p>${data.secret}</p>`
+
+    if( data.msg || data.secret ){
+      resultDOM.innerHTML = `<h5>${data.msg}</h5><p>${data.secret}</p>`
+    }
+
 
     data.secret
   } catch (error) {
     localStorage.removeItem('token')
-    resultDOM.innerHTML = `<p>${error.response.data.msg}</p>`
+    resultDOM.innerHTML = `<p>${error}</p>`
   }
 })
 
