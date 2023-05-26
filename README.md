@@ -1,8 +1,8 @@
 # auth-app-NodeJs
 A Simple App That Demonsrate The Process of Autheticating data  using JWT tokens
 ## ScreenShots
-![image](https://github.com/1FarZ1/auth-app-NodeJs/assets/91225280/f29d6cb6-71fc-4d1f-a6bc-30285e75663a)
-![image](https://github.com/1FarZ1/auth-app-NodeJs/assets/91225280/3792e220-bfe9-41d8-8eab-8eef3987943b)
+![image](https://github.com/1FarZ1/auth-app-NodeJs/assets/91225280/b592019a-c06b-403b-bbf2-bb50bc4ccf95)
+![image](https://github.com/1FarZ1/auth-app-NodeJs/assets/91225280/039a0a96-fe07-46de-bdce-8a7cc81d7808)
 
 ## Tech Used
 - NodeJs
